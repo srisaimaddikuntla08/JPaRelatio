@@ -2,6 +2,9 @@ package com.example.JpaReational.Entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 public class Applicant {
@@ -14,6 +17,7 @@ public class Applicant {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "resume_id")
     private Resume resume;
+
 
     public Applicant(){
 
@@ -47,4 +51,6 @@ public class Applicant {
     public void setResume(Resume resume) {
         this.resume = resume;
     }
+
+
 }
